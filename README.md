@@ -27,35 +27,3 @@ Convolutional Neural Network (CNN): For spatial feature extraction from video fr
 Long Short-Term Memory (LSTM): For capturing temporal dependencies across sequences of frames.
 Softmax Output Layer: For multi-class classification of actions.
 Model Architecture Description
-Video Frames are extracted from video sequences.
-The frames pass through the CNN for feature extraction.
-The extracted features are processed by the LSTM to learn temporal dependencies.
-The output from LSTM is passed through a Softmax layer to classify the detected action.
-Technologies Used
-Python: Programming language
-TensorFlow & Keras: For building and training the deep learning model
-OpenCV: For video processing and frame extraction
-Streamlit: For deploying the model as a web app
-NumPy & Pandas: For data handling
-Scikit-learn: For one-hot encoding and data preprocessing
-Model Evaluation
-The model achieves a high accuracy of 91.16%. Below is a sample classification report:
-
-Action Class	Precision	Recall	F1-Score
-WalkingWithDog	0.92	0.89	0.90
-Punch	0.91	0.93	0.92
-PushUps	0.90	0.91	0.91
-Biking	0.94	0.92	0.93
-One-Hot Encoding Example
-The one-hot encoding format for classes looks like this:
-
-Class	One-Hot Encoding
-0 (WalkingWithDog)	[1, 0, 0, 0]
-1 (Punch)	[0, 1, 0, 0]
-2 (PushUps)	[0, 0, 1, 0]
-3 (Biking)	[0, 0, 0, 1]
-Future Scope
-Real-Time Detection: Enhance the model for real-time action detection on live video feeds.
-Additional Classes: Include more action classes like Fall Detection or Aggressive Behavior.
-Alert System Integration: Implement an automated alert system for real-time notifications.
-Deployment on Edge Devices: Optimize the model for edge devices like Raspberry Pi for on-site processing.
